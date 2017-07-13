@@ -141,6 +141,7 @@
     "url-loader": "^0.5.7",
     "violet-paginator": "^1.8.1",
     "warning": "^2.1.0",
+    "extract-text-webpack-plugin": "^0.9.1",
     "webpack-isomorphic-tools": "^2.2.18"
   },
   "devDependencies": {
@@ -158,7 +159,6 @@
     "eslint-loader": "^1.0.0",
     "eslint-plugin-import": "^0.8.0",
     "eslint-plugin-react": "^3.5.0",
-    "extract-text-webpack-plugin": "^0.9.1",
     "font-awesome": "^4.4.0",
     "font-awesome-webpack": "0.0.4",
     "json-loader": "^0.5.4",
