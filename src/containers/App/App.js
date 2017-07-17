@@ -2,6 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import config from '../../config';
 
+import { asyncConnect } from 'redux-async-connect';
+
+@asyncConnect([{
+  promise: () => Promise.resolve()
+}])
+
 export default class App extends Component {
   static propTypes = {
     children: PropTypes.object,
@@ -35,7 +41,7 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
-        <div className={styles.appContent}>
+        <div>
           {this.props.children}
         </div>
       </div>
