@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
-import Helmet from 'react-helmet';
-import config from '../../config';
+import React, { Component, PropTypes } from 'react'
+import Helmet from 'react-helmet'
+import config from '../../config'
+import SiteHeader from '../../components/navigation/SiteHeader'
 
-import { asyncConnect } from 'redux-async-connect';
+import { asyncConnect } from 'redux-async-connect'
 
 @asyncConnect([{
   promise: () => Promise.resolve()
@@ -14,37 +15,37 @@ export default class App extends Component {
     user: PropTypes.object,
     logout: PropTypes.func,
     pushState: PropTypes.func
-  };
+  }
 
   static contextTypes = {
     store: PropTypes.object.isRequired
-  };
+  }
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.user && nextProps.user) {
       // login
-      this.props.pushState('/loginSuccess');
+      this.props.pushState('/loginSuccess')
     } else if (this.props.user && !nextProps.user) {
       // logout
-      this.props.pushState('/');
+      this.props.pushState('/')
     }
   }
 
   handleLogout = (event) => {
-    event.preventDefault();
-    this.props.logout();
-  };
+    event.preventDefault()
+    this.props.logout()
+  }
 
   render() {
-    const styles = require('./App.scss');
+    const styles = require('./App.scss')
 
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
-        <div>
-          {this.props.children}
-        </div>
+        <div className={styles.fixedFrame} />
+        <SiteHeader />
+        <div>{this.props.children}</div>
       </div>
-    );
+    )
   }
 }
