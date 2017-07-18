@@ -53,8 +53,7 @@
       "env": {
         "NODE_PATH": "./api",
         "NODE_ENV": "production",
-        "APIPORT": 3030,
-        "PORT": 8080
+        "APIPORT": 3030
       }
     },
     "start-dev": {
