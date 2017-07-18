@@ -5,6 +5,7 @@ html,body {
   font-size: 10px;
   font-weight: 300;
   background: $main-background;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
 .app {
