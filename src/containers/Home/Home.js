@@ -9,11 +9,13 @@ export default class Home extends Component {
     // require the logo image both from client and server
     // const logoImage = require('./logo.png')
     return (
-      <div className={styles.home}>
+      <div>
         <Helmet title="Home"/>
-        <div>
+        <hr />
+        <div className={styles.home}>
           Kiyo Nishimura is a front end web develper based in Sydney, Australia.
         </div>
+        <hr />
       </div>
     )
   }

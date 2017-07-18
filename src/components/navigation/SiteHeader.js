@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router'
 export default class SiteHeader extends React.Component {
 	render() {
   const styles = require('./SiteHeader.scss')
@@ -8,6 +8,8 @@ export default class SiteHeader extends React.Component {
 				<div className={styles.site_name}>
 					Kiyo Nishimura
 				</div>
+				<Link to={'/'}>Home</Link>
+				<Link to={'/animation/'}>Animation</Link>
 			</div>
 		)
 	}

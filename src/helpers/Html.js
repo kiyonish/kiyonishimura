@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom/server'
 import serialize from 'serialize-javascript'
 import Helmet from 'react-helmet'
@@ -13,11 +14,11 @@ import Helmet from 'react-helmet'
  * by the server.js file.
  */
 export default class Html extends Component {
-  static propTypes = {
-    assets: PropTypes.object,
-    component: PropTypes.node,
-    store: PropTypes.object
-  }
+  // static propTypes = {
+  //   assets: PropTypes.object,
+  //   component: PropTypes.node,
+  //   store: PropTypes.object
+  // }
 
   render() {
     const {assets, component, store} = this.props
