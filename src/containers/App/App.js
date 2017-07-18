@@ -44,7 +44,9 @@ export default class App extends Component {
         <Helmet {...config.app.head}/>
         <div className={styles.fixedFrame} />
         <SiteHeader />
-        <div>{this.props.children}</div>
+        <div className={styles.viewport}>
+          {this.props.children}
+        </div>
       </div>
     )
   }

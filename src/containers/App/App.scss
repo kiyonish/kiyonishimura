@@ -6,7 +6,13 @@ html,body {
   font-weight: 300;
   background: $main-background;
 }
-
+.app {
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  display: block;
+  padding: 4rem;
+  height: 100vh;
+}
 .fixedFrame {
   box-sizing: border-box;
   border: 20px solid white;
@@ -17,10 +23,6 @@ html,body {
   width: 100%;
   z-index: 1;
 }
-.app {
-  font-size: 1.2rem;
-  box-sizing: border-box;
-  display: block;
-  padding: 4rem;
-  height: 100vh;
+.viewport {
+  margin-top: 100px;
 }

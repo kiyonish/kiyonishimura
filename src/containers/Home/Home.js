@@ -11,6 +11,9 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
         <Helmet title="Home"/>
+        <div>
+          Kiyo Nishimura is a front end web develper based in Sydney, AU.
+        </div>
       </div>
     )
   }
