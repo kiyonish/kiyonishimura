@@ -12,7 +12,7 @@ export default class Home extends Component {
       <div className={styles.home}>
         <Helmet title="Home"/>
         <div>
-          Kiyo Nishimura is a front end web develper based in Sydney, AU.
+          Kiyo Nishimura is a front end web develper based in Sydney, Australia.
         </div>
       </div>
     )
