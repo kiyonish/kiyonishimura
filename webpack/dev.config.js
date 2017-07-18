@@ -62,11 +62,13 @@ reactTransform[1].transforms.push({
 });
 
 module.exports = {
-  devtool: 'inline-eval-cheap-source-map',
+  devtool: 'inline-source-map',
   context: path.resolve(__dirname, '..'),
   entry: {
     'main': [
       'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
+      'bootstrap-sass!./src/theme/bootstrap.config.js',
+      'font-awesome-webpack!./src/theme/font-awesome.config.js',
       './src/client.js'
     ]
   },
@@ -104,7 +106,7 @@ module.exports = {
     new webpack.IgnorePlugin(/webpack-stats\.json$/),
     new webpack.DefinePlugin({
       __CLIENT__: true,
-      __SERVER__: true,
+      __SERVER__: false,
       __DEVELOPMENT__: true,
       __DEVTOOLS__: true  // <-------- DISABLE redux-devtools HERE
     }),
