@@ -18,7 +18,8 @@
     "no-console": 0,
     "no-alert": 0,
     "indent": [1, 2, {"SwitchCase": 1}],
-    "semi": [1, "never"]
+    "semi": [1, "never"],
+    "no-shadow": 0
   },
   "plugins": [
     "react", "import"

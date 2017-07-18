@@ -1,7 +1,7 @@
 import React from 'react'
-import {IndexRoute, Route} from 'react-router'
+import { IndexRoute, Route } from 'react-router'
 
-import AnimationCanvas from './components/experiments/AnimationCanvas'
+// import AnimationCanvas from './components/experiments/AnimationCanvas'
 
 import {
     App,
@@ -15,12 +15,11 @@ export default () => {
    */
   return (
     <Route path="/" component={App}>
-      { /* Home (main) route */ }
       <IndexRoute component={Home}/>
-      <Route path="/animation/" component={AnimationCanvas} />
-
-      { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />
     </Route>
   )
 }
+
+
+// <Route path="/animation/" component={AnimationCanvas} />

@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { TweenLite } from 'gsap'
-import 'gsap/CSSPlugin'
-import { Expo } from 'gsap/EasePack'
 import GSAP from 'react-gsap-enhancer'
+import { TweenLite } from 'gsap'
+import { Expo } from 'gsap/EasePack'
+import 'gsap/CSSPlugin'
 
 
 class AnimatedObjects extends React.Component {
